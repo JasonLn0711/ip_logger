@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logged Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Logged Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>IP</th>
+                <th>Country</th>
+                <th>City</th>
+                <th>Device</th>
+                <th>OS</th>
+                <th>Browser</th>
+                <th>Referrer</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for log in logs %}
+            <tr>
+                <td>{{ log['IP'] }}</td>
+                <td>{{ log['Country'] }}</td>
+                <td>{{ log['City'] }}</td>
+                <td>{{ log['Device'] }}</td>
+                <td>{{ log['OS'] }}</td>
+                <td>{{ log['Browser'] }}</td>
+                <td>{{ log['Referrer'] }}</td>
+                <td>{{ log['Timestamp'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

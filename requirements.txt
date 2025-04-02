@@ -1,0 +1,3 @@
+Flask==2.2.2
+user-agents==2.2.0
+requests==2.31.0
